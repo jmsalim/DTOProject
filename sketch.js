@@ -56,6 +56,7 @@ const WORDS = [
 // Words / icons that the swarm will form as big dot shapes
 const SHAPES = [
   '407',
+  'WELCOME!',
   'LOVE',
   'EOLA',
   'KNIGHTS',
