@@ -69,7 +69,6 @@ const SHAPES = [
   'VALOR',     // Valor with camo scheme
   'VAMOS',     // Vamos (Orlando City)
   'ORLANDO',
-  'MAGIC',     // Orlando Magic logo-style icon + palette
   'GO KNIGHTS!',
   'CHARGE ON!',
   'MICKEY',    // Mickey three-circle icon
