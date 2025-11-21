@@ -47,9 +47,9 @@ const WORDS = [
   'UCF',  // University of Central Florida
   'MAGIC',// Orlando Magic
   'EOLA', // Lake Eola
-  'LAKE', // Lakes around Orlando
-  'LYNX', // LYNX bus system
-  'SUN',  // Sunshine State vibe
+  'GO KNIGHTS!',
+  'CHARGE ON!', // LYNX bus system
+  'FLORIDA',  // Sunshine State vibe
   '407'   // Area code
 ]; // Orlando-relevant labels for the swarm
 
@@ -58,21 +58,23 @@ const SHAPES = [
   '407',
   'LOVE',
   'EOLA',
+  'KNIGHTS',
   'DTO',
   'UCF',       // UCF word with black-gold-white palette
   'EPIC',      // Epic Universe nod
   'PRIDE',     // PRIDE word with per-letter colors
+  'DIGITAL',
+  'FIEA',
   'VALOR',     // Valor with camo scheme
   'VAMOS',     // Vamos (Orlando City)
   'ORLANDO',
   'MAGIC',     // Orlando Magic logo-style icon + palette
-  'LAKE',
-  'SUNRAIL',
+  'GO KNIGHTS!',
+  'CHARGE ON!',
   'MICKEY',    // Mickey three-circle icon
   'UNIVERSAL', // Universal Studios globe icon
   'FLAG',      // USA flag silhouette (auto USA colors)
   'CASTLE',    // Cinderella’s Castle silhouette
-  'EPCOT',     // Epcot ball silhouette
   'EYE'        // Orlando Eye wheel silhouette
 ]; // Sequence of shapes
 let currentShapeIndex = 0; // Index in SHAPES for current formation
@@ -132,7 +134,7 @@ function getSchemeColor(baseHue) { // Compute HSB color based on time-of-day and
   }
 
   // SPECIAL: UCF palette whenever UCF shape is active
-  if (currentShapeText === 'UCF') {
+  if (currentShapeText === 'UCF' | currentShapeText === 'GO KNIGHTS!' | currentShapeText === 'CHARGE ON!' | currentShapeText === 'KNIGHTS') {
     let h, s, b;
     const region = floor(map(baseHue, 0, 360, 0, 3)); // 0,1,2 → black/gold/white
     if (region === 0) { // Black
